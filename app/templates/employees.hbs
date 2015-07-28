@@ -1,0 +1,25 @@
+<input type="text" id="new-employee" placeholder="Enter employee" />
+
+<section id="main">
+    <ul id="employee-list">
+            {{#each model as |employee|}}
+                {{employee-component employee=employee}}
+            {{/each}}
+    </ul>
+</section>
+
+<footer id="footer">
+    <span id="todo-count">
+        <strong>{{model.length}} </strong> employees
+    </span>
+
+<form>
+    <div> Add Employee Information
+        Name: <input type="text" id="name">
+        Monthly Salary: <input type="text" id="salary">
+        <button id="add-employee">
+            Add Employee
+        </button>
+    </div>
+</form>
+</footer>
