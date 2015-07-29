@@ -1,0 +1,19 @@
+   <header id="header">
+        <h1>Dashboard</h1>
+    </header>
+
+    <form>
+    <div> Add Employee Information
+        <div>
+            Name: {{ input type="text" value=employeeName }}
+            Monthly Salary: {{ input type="text" id="salary"  value=employeeSalary}}
+            <button id="add-employee" {{action "addEmployee"}}>
+            Add Employee
+            </button>
+        </div>
+    </div>
+</form>
+
+<div>
+  {{#link-to 'employees'}} <button type="button">Go to Employees</button> {{/link-to}}
+</div>
